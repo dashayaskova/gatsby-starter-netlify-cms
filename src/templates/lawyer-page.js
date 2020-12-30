@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
+import './main-styles.css';
 import './lawyer-page.css';
 import MainPageFragment from '../components/lawyer/MainPageFragment'
 import TopicsFragment from '../components/lawyer/TopicsFragment'
@@ -37,15 +38,14 @@ export const LawyerPageTemplate = ({
 
 LawyerPageTemplate.propTypes = {
   title: PropTypes.string,
-  body: PropTypes.string,
-  networks: PropTypes.object,
+  networks: PropTypes.array,
   backgroundImage: PropTypes.object,
-  mainPageCards: PropTypes.object,
-  topics: PropTypes.object,
-  experienceCards: PropTypes.object,
-  news: PropTypes.object,
-  publications: PropTypes.object,
-  people: PropTypes.object
+  mainPageCards: PropTypes.array,
+  topics: PropTypes.array,
+  experienceCards: PropTypes.array,
+  news: PropTypes.array,
+  publications: PropTypes.array,
+  people: PropTypes.array
 }
 
 const LawyerPage = ({ data }) => {
@@ -54,7 +54,6 @@ const LawyerPage = ({ data }) => {
   return (
     <LawyerPageTemplate
       title={frontmatter.title}
-      body={frontmatter.body}
       networks={frontmatter.networks}
       backgroundImage={frontmatter.backgroundImage}
       mainPageCards={frontmatter.mainPageCards}
@@ -82,7 +81,6 @@ query LawyerPageTemplate {
   markdownRemark(frontmatter: { templateKey: { eq: "lawyer-page" } }) {
     frontmatter {
       title
-      body
       news {
         title
         date

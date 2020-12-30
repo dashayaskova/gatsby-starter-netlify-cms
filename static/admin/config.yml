@@ -71,7 +71,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "lawyer-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Background image", name: "backgroundImage", widget: "image"}
           - label: "Networks"
             name: "networks"

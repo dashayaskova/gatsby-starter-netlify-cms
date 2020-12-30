@@ -3,9 +3,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 export default ({ people }) => (
     <div>
-        <div className="container-pad container-pad-ver">
+        <div className="container-pad-hor container-pad-ver">
             <div className="row p-0 m-0">
-                <div className="col-sm-8 col-xs-12">
+                <div className="col-md-12 col-lg-8">
                     <div className='small-title'>Our people in Focus</div>
                     <div className="row p-0 m-0">
                         {
@@ -16,13 +16,13 @@ export default ({ people }) => (
                                         person.avatar} style={{ marginBottom: '20px' }}/>
                                     <div className="small-font bold">{person.name}</div>
                                     <div className="small-font" style={{fontStyle: 'italic'}}>{person.vacancy}</div>
-                                    <a href="#" className="small-font red bold">View profile</a>
+                                    <a href="#" className="small-font red bold">View profile →</a>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
-                <div className="col-sm-4">
+                <div className="mt-4 mt-lg-0 col-sm-12 col-md-12 col-lg-4">
                     <div className='small-title'>Find a Lawyer</div>
                     <Formik
                         initialValues={{ name: '', areas: [], offices: [] }}
@@ -53,6 +53,7 @@ export default ({ people }) => (
                                     component="select"
                                     id="areas"
                                     name="areas"
+                                    value="F"
                                 >
                                     <option value="F">Family</option>
                                     <option value="C">Corruption</option>
@@ -64,15 +65,15 @@ export default ({ people }) => (
                                     component="select"
                                     id="offices"
                                     name="offices"
+                                    value="NY"
                                 >
-                                    <option value="F">NY</option>
-                                    <option value="C">WA</option>
+                                    <option value="NY">NY</option>
+                                    <option value="WA">WA</option>
                                 </Field>
                                 <ErrorMessage name="offices" component="div" />
 
                                 <button
-                                    className="small-font filled-btn"
-                                    style={{ padding: '3px 20px'}}
+                                    className="small-font filled-btn pt-1 pb-1 pr-4 pl-4"
                                     type="submit"
                                     disabled={isSubmitting}
                                 >

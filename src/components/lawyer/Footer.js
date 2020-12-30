@@ -7,14 +7,14 @@ export default ({ recentPosts, title, networks }) => (
     <>
         <Message question="Do you need professional legal assistance?" answer="Get a Quote" />
         <div className="footer-csm small-font light-gray">
-            <div className="container-pad container-pad-ver">
+            <div className="container-pad-hor container-pad-ver">
                 <div className="row p-0 m-0">
-                    <div className="col-sm-3">
+                    <div className="col-sm-12 col-md-6 col-lg-3">
                         <div className="footer-header">
                             Contacts
                         </div>
                         <div>Address</div>
-                        <div style={{ color: 'white' }}>+380931111111</div>
+                        <div className="white">+380931111111</div>
                         <a href="mailto: email@example.com" className="red">email@example.com</a>
 
                         <div className="footer-header">
@@ -62,51 +62,51 @@ export default ({ recentPosts, title, networks }) => (
                             )}
                         </Formik>
                     </div>
-                    <div className="col-sm-3 footer-list">
+                    <div className="col-sm-12 col-md-6 col-lg-3 footer-list">
                         <div className="footer-header">
                             Explore our site
                         </div>
-                        <div className="light-gray">
-                            <a>People</a>
-                        </div>
-                        <hr class="solid" />
                         <div>
                             <a>People</a>
                         </div>
-                        <hr class="solid" />
+                        <hr />
                         <div>
                             <a>People</a>
                         </div>
-                        <hr class="solid" />
+                        <hr />
                         <div>
                             <a>People</a>
                         </div>
-                        <hr class="solid" />
+                        <hr />
+                        <div>
+                            <a>People</a>
+                        </div>
+                        <hr />
                         <div>
                             <a>People</a>
                         </div>
                     </div>
-                    <div className="col-sm-3 footer-list">
+                    <div className="col-sm-12 col-md-6 col-lg-3 footer-list">
                         <div className="footer-header">
                             Practice areas
                         </div>
-                        <div className="small-font light-gray">
+                        <div>
                             <a>Banking & Finance</a>
                         </div>
-                        <hr class="solid" />
-                        <div className="small-font light-gray">
+                        <hr />
+                        <div>
                             <a>Banking & Finance</a>
                         </div>
-                        <hr class="solid" />
-                        <div className="small-font light-gray">
+                        <hr />
+                        <div>
                             <a>Banking & Finance</a>
                         </div>
-                        <hr class="solid" />
-                        <div className="small-font light-gray">
+                        <hr />
+                        <div>
                             <a>Banking & Finance</a>
                         </div>
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-sm-12 col-md-6 col-lg-3">
                         <div className="footer-header">
                             Recent posts
                         </div>
@@ -138,7 +138,7 @@ export const Message = ({ question, answer, onClick }) => {
     const [show, setShow] = React.useState(true);
 
     return show ?
-        <div className="row-csm footer-end message-csm container-pad">
+        <div className="row-csm footer-end message-csm container-pad-hor">
             <div style={{ color: 'white' }}>{question}</div>
             <button
                 onClick={(e) => { onClick && onClick(e); setShow(false); }}

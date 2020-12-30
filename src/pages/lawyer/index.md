@@ -16,6 +16,9 @@ mainPageCards:
   - title: Join our Team
     description: Meet your career goals!
     image: /img/world.png
+  - title: Press Releases
+    description: Don't miss latest updates
+    image: /img/world.png
 topics:
   - title: Around the world
     description: We have experts all over the world and they are ready to help you

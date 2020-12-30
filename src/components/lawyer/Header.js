@@ -2,16 +2,16 @@ import React from 'react';
 
 export default ({ title, networks }) => (
     <>
-        <div className="container-pad social-networks row-csm">
+        <div className="container-pad-hor dark-gray-background">
             <SocialNetworks networks={networks} />
         </div>
 
-        <div className="container-pad header row-csm">
+        <div className="container-pad-hor header row-csm">
             <div className="title"><a href="#">{title}</a></div>
             <div className="item-end">NUMBER</div>
         </div>
 
-        <div className="container-pad borders">
+        <div className="container-pad-hor borders">
             <Navbar>
                 <NavbarLink href='/lawyer'>Home</NavbarLink>
                 <NavbarLink>About</NavbarLink>
@@ -24,11 +24,16 @@ export default ({ title, networks }) => (
 );
 
 export const SocialNetworks = ({ networks }) => {
-    return networks.map((network) =>
-        <a key={network.link} className="social-network" href={network.link}>
-            <img className="social-network-img"
-                src={!!network.image.childImageSharp ? network.image.childImageSharp.fluid.src : network.image} />
-        </a>)
+    return (
+        <div className="social-networks">
+            { networks.map((network) => (
+                <a key={network.link} className="social-network" href={network.link}>
+                    <img className="social-network-img"
+                        src={!!network.image.childImageSharp ? network.image.childImageSharp.fluid.src : network.image} />
+                </a>
+            ))}
+        </div>
+    )
 };
 
 export const Navbar = (props) => {

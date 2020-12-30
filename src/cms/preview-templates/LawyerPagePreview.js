@@ -40,7 +40,7 @@ const LawyerPagePreview = ({ entry }) => {
   )
 }
 
-BlogPostPreview.propTypes = {
+LawyerPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   })

@@ -10,10 +10,10 @@ export default ({ cards, backgroundImage }) => (
         }}
             className="background-image">
         </div>
-        <div style={{ background: '#e7e7e7' }}>
-            <div className="container-pad">
+        <div className="light-gray-background">
+            <div className="container-pad-hor">
                 <div className="row p-0 m-0">
-                    {cards.map((card) => <MainPageCard key={card.title} card={card} />)}
+                    {cards.map((card) => <MainPageCard card={card} />)}
                 </div>
             </div>
         </div>
@@ -21,10 +21,10 @@ export default ({ cards, backgroundImage }) => (
 );
 
 export const MainPageCard = ({ card }) => (
-    <button className="card-csm col-sm-4">
+    <button className="card-csm col-sm-12 col-md-4 col-lg-4">
         <div className="row-csm" style={{ alignItems: 'center' }}>
-            <img className="small-icon" src={!!card.image.childImageSharp ? card.image.childImageSharp.fluid.src : card.image} />
-            <div className="column" style={{ alignItems: 'flex-start' }}>
+            <img className="small-icon mr-2" src={!!card.image.childImageSharp ? card.image.childImageSharp.fluid.src : card.image} />
+            <div className="col-csm" style={{ alignItems: 'flex-start' }}>
                 <div className="middle-font">{card.title}</div>
                 <div className="small-font">{card.description}</div>
             </div>

@@ -1,8 +1,8 @@
 import React from 'react'
 
 export default () => (
-    <div style={{ backgroundColor: '#fafafa' }}>
-        <div className="container-pad container-pad-ver">
+    <div className="gray-background">
+        <div className="container-pad-hor container-pad-ver">
             <div className="fragment-title">Find our people and offices</div>
             <div className="row p-0 m-0">
                 <div className="col-sm-8">
@@ -10,14 +10,14 @@ export default () => (
                 </div>
                 <div className="col-sm-4">
                     <div className="row-csm small-font">
-                        <div className="column">
+                        <div className="col-csm mr-5">
                             <div>London</div>
                             <div>Rome</div>
                             <div>Prague</div>
                             <div>Paris</div>
                             <div>Madrid</div>
                         </div>
-                        <div className="column">
+                        <div className="col-csm">
                             <div>New York</div>
                             <div>Brussels</div>
                             <div>Barcelona</div>
