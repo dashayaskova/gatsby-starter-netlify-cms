@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default ({ title, networks }) => (
     <>
@@ -42,9 +42,15 @@ export const Navbar = (props) => {
     )
 };
 
-export const NavbarLink = ({ children, href = '/' }) => {
+export const NavbarLink = ({ children, href = '#' }) => {
+    const [path, setPath] = useState(null);
+
+    useEffect(() => {
+        setPath(window.location.pathname);
+    }, []);
+
     return (
-        <div className={`${window !== undefined && window.location.pathname === href ? "selected" : ""}`}>
+        <div className={`${ path === href ? "selected" : ""}`}>
             <a href={href}>{children}</a>
         </div>
     )
