@@ -72,11 +72,11 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "lawyer-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Background image", name: "backgroundImage", widget: "iamge"}
+          - {label: "Background image", name: "backgroundImage", widget: "image"}
           - label: "Networks"
             name: "networks"
             widget: "list"
-            summary: '{{fields.title}}'
+            summary: '{{fields.name}}'
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Link, name: link, widget: string }
