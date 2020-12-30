@@ -44,7 +44,7 @@ export const Navbar = (props) => {
 
 export const NavbarLink = ({ children, href = '/' }) => {
     return (
-        <div className={`${window.location.pathname === href ? "selected" : ""}`}>
+        <div className={`${window !== undefined && window.location.pathname === href ? "selected" : ""}`}>
             <a href={href}>{children}</a>
         </div>
     )
