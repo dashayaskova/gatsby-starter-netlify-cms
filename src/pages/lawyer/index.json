@@ -1,0 +1,17 @@
+{
+  "templateKey": "lawyer-page",
+  "title": "Lawyer&co",
+  "backgroundImage": "/img/scott-graham-OQMZwNd3ThU-unsplash.jpg",
+  "networks": [
+    {
+      "name": "facebook",
+      "image": "/img/facebook.png",
+      "link": "https://www.facebook.com/"
+    },
+    {
+      "name": "instagram",
+      "image": "/img/instagram.png",
+      "link": "https://www.instagram.com/"
+    }
+  ]
+}
