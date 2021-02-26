@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  local_backend: true
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -64,3 +65,68 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+      - file: "src/pages/lawyer/index.json"
+        label: "Lawyer"
+        name: "lawyer"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "lawyer-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Background image", name: "backgroundImage", widget: "image"}
+          - label: "Networks"
+            name: "networks"
+            widget: "list"
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Link, name: link, widget: string }
+              - { label: Image, name: image, widget: image }
+          - label: "Cards on the main page"
+            name: "mainPageCards"
+            widget: "list"
+            summary: '{{fields.title}}'
+            max: 3
+            min: 3
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Image, name: image, widget: image }
+          - label: "Topics"
+            name: "topics"
+            widget: "list"
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Image, name: image, widget: image }
+          - label: "Experience cards"
+            name: "experienceCards"
+            widget: "list"
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Icon, name: icon, widget: image }
+          - label: "News"
+            name: "news"
+            widget: "list"
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Date, name: date, widget: string }
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Date, name: date, widget: string }
+          - label: "People"
+            name: "people"
+            widget: "list"
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Vacancy, name: vacancy, widget: string }
+              - { label: Avatar, name: avatar, widget: string }
+          
+

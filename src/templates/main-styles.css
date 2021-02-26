@@ -1,0 +1,124 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+button {
+    border: none;
+}
+
+input, select {
+    outline: none;
+    width: 100%; 
+    background-color: #f5f5f5;
+    border: none;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 0;
+    color: #b6b6b6;
+}
+
+
+.row-csm {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-csm {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-pad-hor {
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.container-pad-ver {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.middle-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.small-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.small-title {
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.small-font, label, .footer-header {
+    font-size: 0.8rem;
+}
+
+.middle-font {
+    font-size: 1.2rem;
+}
+
+
+.big-font {
+    font-size: 2rem;
+}
+
+.red {
+    color: #b1001d;
+}
+
+.white, .footer-header, .footer-csm a:hover {
+    color: white;
+}
+
+.light-gray {
+    color: #cecece;
+}
+
+.bold, .footer-header {
+    font-weight: bold;
+}
+
+.cursive {
+    font-style: italic;
+}
+
+.gray-background {
+    background-color: #f7f7f7;
+}
+
+.light-gray-background {
+    background-color: #e7e7e7;
+}
+
+.dark-gray-background {
+    background-color: #2e2e30;
+}
+
+@media (max-width: 600px) {
+    html{
+        font-size: 20px;
+    }
+
+    .container-pad-hor {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .container-pad-ver {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
